@@ -46,8 +46,7 @@ function decode(expr) {
 
     let arr2 = {};
     for (let key in MORSE_TABLE) {
-        let newKey = key.replace(/\./g, '10').replace(/-/g, '11');
-        newKey = newKey.padStart(10, '0');
+        let newKey = key.replace(/\./g, '10').replace(/-/g, '11').padStart(10, '0');
         arr2[newKey] = MORSE_TABLE[key];
     }
 
